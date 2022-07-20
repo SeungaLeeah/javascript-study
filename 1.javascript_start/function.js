@@ -150,3 +150,23 @@ const simpleMultiply = (a,b)=>{
 (function hello(){
     console.log('IIFF');
 })();
+
+//Quiz time
+// 정해진 데이터를 처리하는 경우 if문 보다는 switch문을 사용하는게 좋음
+function calculate(command, a, b){
+    switch(command){
+        case 'add':
+            return a + b;
+        case 'substract':
+            return a - b;
+        case 'divide': 
+            return a / b;
+        case 'multiply':
+            return a * b;
+        case 'remainder':
+            return a %b;
+        default:
+            throw Error('unknown command');
+    }
+}
+console.log(calculate('add', 2, 3));
